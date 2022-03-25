@@ -25,12 +25,10 @@ jobs:
       - name: Create and start virtual environment
         run: |
           python -m venv venv
-          source venv/bin/activate 
-          python app.py
-          
+          source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt 
+        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -41,7 +39,6 @@ jobs:
           path: |
             . 
             !venv/
-          
 
   deploy:
     runs-on: ubuntu-latest
@@ -63,4 +60,4 @@ jobs:
         with:
           app-name: 'Sentiment-analysis-flask-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3F09F1B6D80A463391B85F8AAE37D670 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_826D46D7C81E43B982D6A34B12D442D9 }}
