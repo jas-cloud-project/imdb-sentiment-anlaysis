@@ -61,4 +61,4 @@ jobs:
           app-name: 'Sentiment-analysis-flask-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_6D4802F7FF39464EAE8B1F27D51A3F16 }}
-      - run: python app.py
+
